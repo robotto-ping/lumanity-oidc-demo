@@ -35,7 +35,7 @@
             color: #666;
             margin-bottom: 2rem;
         }
-        #login-btn {
+       .login-btn {
             background-color: #081c49;
             color: white;
             border: none;
@@ -45,7 +45,7 @@
             cursor: pointer;
             transition: background 0.3s;
         }
-        #login-btn:hover {
+        .login-btn:hover {
             background-color: #003366;
         }
         #result {
@@ -71,8 +71,8 @@
     <p class="subtitle">Identity & Access Demonstration</p>
 
     <div id="auth-section">
-        <button id="login-btn-merck">Log In to Merck Environment</button>
-         <button id="login-btn-pfizer">Log In to Pfizer Environment</button>
+        <button id="login-btn-merck" class="login-btn">Log In to Merck Environment</button>
+         <button id="login-btn-pfizer" class="login-btn">Log In to Pfizer Environment</button>
     </div>
 
     <div id="result">
@@ -95,12 +95,13 @@
         scope: 'openid profile email'
     };
 
-    const loginBtn = document.getElementById('login-btn');
+    const loginBtnMerck = document.getElementById('login-btn-merck');
+    const loginBtnPfizer = document.getElementById('login-btn-pfizer');
     const resultDiv = document.getElementById('result');
     const claimsOutput = document.getElementById('claims-output');
 
     // 1. Handle the Login Button Click
-    login-btn-merck.addEventListener('click', () => {
+    loginBtnMerck.addEventListener('click', () => {
         const nonce = Math.random().toString(36).substring(2);
         const state = Math.random().toString(36).substring(2);
         
@@ -118,7 +119,7 @@
         window.location.href = authUrl;
     });
 
-     login-btn-pfizer.addEventListener('click', () => {
+     loginBtnPfizer.addEventListener('click', () => {
         const nonce = Math.random().toString(36).substring(2);
         const state = Math.random().toString(36).substring(2);
         
