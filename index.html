@@ -29,7 +29,9 @@
             font-weight: bold;
             background:  #081c49;
             color: #081c49; /* Lumanity-inspired blue */
-            margin-bottom: 0.5rem;
+    max-width: 300px;
+              padding: 12px;
+              margin: 12px;
         }
         .subtitle {
             color: #666;
@@ -39,7 +41,7 @@
             background-color: #081c49;
             color: white;
             border: none;
-            padding: 24px;
+            padding: 12px;
             font-size: 1rem;
             border-radius: 4px;
             cursor: pointer;
@@ -82,7 +84,7 @@
     <div id="result">
         <h3>ID Token Claims</h3>
         <pre id="claims-output"></pre>
-        <button onclick="window.location.hash=''; location.reload();" style="margin-top:10px; cursor:pointer;">Clear / Logout</button>
+        <button class="login-btn" onclick="window.location.hash=''; location.reload();" style="margin-top:10px; cursor:pointer;">Clear / Logout</button>
     </div>
 </div>
 
